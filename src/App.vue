@@ -5,20 +5,30 @@
       <router-link to="/about">About</router-link>
     </nav>
 
-    <my-partytown/>
+    <strong>window.fetch(url) text</strong>
+    <code>
+      <span id="testFetchText"></span>
+    </code>
 
+    <use-partytown>
+      (function() {
+        console.info('use-partytown terpanggil')
+      })();
+    </use-partytown>
+    
+    <!-- <my-partytown/> -->
+    
     <!-- <router-view/> -->
-
   </div>
 </template>
 
 <script>
-import MyPartytown from './components/MyPartytown.vue'
+// import MyPartytown from './components/MyPartytown.vue'
 
 export default {
-  components: {
-    MyPartytown
-  }
+  // components: {
+  //   MyPartytown
+  // }
 }
 </script>
 
