@@ -12,9 +12,13 @@
 
     <use-partytown 
       script="
-      (function() {
-        console.info('use-partytown terpanggil')
-      })();
+        (async function () {
+          const elm = document.getElementById('testFetchText');
+          const rsp = await window.fetch('text.txt');
+          const text = await rsp.text();
+          elm.textContent = text;
+          elm.className = 'testFetchText';
+        })();
       "
     />
     
