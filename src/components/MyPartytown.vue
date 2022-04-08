@@ -1,14 +1,15 @@
 <template>
   <div>
     <script type="text/partytown">
-        <slot></slot>
+        {{ script }}
     </script>
   </div>
 </template>
 
 <script>
 export default {
-  name: "MyPartytown"
+  name: "MyPartytown",
+  props: ['script']
 }
 </script>
 

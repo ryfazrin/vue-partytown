@@ -10,11 +10,13 @@
       <span id="testFetchText"></span>
     </code>
 
-    <use-partytown>
+    <use-partytown 
+      script="
       (function() {
         console.info('use-partytown terpanggil')
       })();
-    </use-partytown>
+      "
+    />
     
     <!-- <my-partytown/> -->
     
