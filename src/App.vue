@@ -4,7 +4,22 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </nav>
+
+    <strong>window.fetch(url) text</strong>
+    <code>
+      <span id="testFetchText"></span>
+    </code>
+
     <router-view/>
+    <script type="text/partytown">
+      (async function () {
+        const elm = document.getElementById('testFetchText');
+        const rsp = await window.fetch('text.txt');
+        const text = await rsp.text();
+        elm.textContent = text;
+        elm.className = 'testFetchText';
+      })();
+    </script>
   </div>
 </template>
 
