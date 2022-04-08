@@ -5,23 +5,22 @@
       <router-link to="/about">About</router-link>
     </nav>
 
-    <strong>window.fetch(url) text</strong>
-    <code>
-      <span id="testFetchText"></span>
-    </code>
+    <my-partytown/>
 
-    <router-view/>
-    <script type="text/partytown">
-      (async function () {
-        const elm = document.getElementById('testFetchText');
-        const rsp = await window.fetch('text.txt');
-        const text = await rsp.text();
-        elm.textContent = text;
-        elm.className = 'testFetchText';
-      })();
-    </script>
+    <!-- <router-view/> -->
+
   </div>
 </template>
+
+<script>
+import MyPartytown from './components/MyPartytown.vue'
+
+export default {
+  components: {
+    MyPartytown
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
