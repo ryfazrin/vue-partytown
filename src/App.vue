@@ -63,7 +63,7 @@ export default {
     gtmPush: function () {
         const data = { event: 'button-click', from: 'partytown' };
         console.log(`GTM dataLayer.push(${JSON.stringify(data)})`);
-        dataLayer.push({ event: 'button-click', from: 'partytown' });
+         window['dataLayer'].push({ event: 'button-click', from: 'partytown' });
 
         const testDataLayer = document.getElementById('testDataLayer');
         testDataLayer.textContent = 'pushed';
